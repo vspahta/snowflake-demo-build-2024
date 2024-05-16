@@ -34,6 +34,7 @@ jobs:
           python-version: 3.8.x
      # Run schemachange 
       - name: Run schemachange
+      - run: echo Hello, world!
         env:
           SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
           SF_USERNAME: ${{ secrets.SF_USERNAME }}
