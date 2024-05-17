@@ -41,8 +41,7 @@ jobs:
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       - run: python --version
       - run: pip install schemachange
-      - run: echo "Step 2 Running schemachange" 
-      - run: example-command "$SF_ACCOUNT"
-      - run: echo "My SF_ACCOUNT secret is ${{ secrets.SF_ACCOUNT }}"
+      - name: echo "Step 2 Running schemachange" 
+        run: echo "My SF_ACCOUNT secret is ${{ secrets.SF_ACCOUNT }}"
         
         
