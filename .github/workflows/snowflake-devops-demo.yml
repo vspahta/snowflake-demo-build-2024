@@ -27,20 +27,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-     # Runs a set of commands using the runners shell
-      - name: Use Python 3.8.x
-      - uses: actions/setup-python@v2.2.1
-        with:
-          python-version: 3.8.x
-     # Run schemachange 
-      - name: Run schemachange
-      - run: echo Hello, world!
-        env:
-          SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
-          SF_USERNAME: ${{ secrets.SF_USERNAME }}
-          SF_ROLE: ${{ secrets.SF_ROLE }}
-          SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
-          SF_DATABASE: ${{ secrets.SF_DATABASE }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
         
         
