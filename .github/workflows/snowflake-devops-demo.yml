@@ -30,15 +30,14 @@ jobs:
         with:
           python-version: 3.8.x
       # Run schemachange 
-      - env:
+        env:
            SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
            SF_USERNAME: ${{ secrets.SF_USERNAME }}
            SF_ROLE: ${{ secrets.SF_ROLE }}
            SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
            SF_DATABASE: ${{ secrets.SF_DATABASE }}
            SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
-      - run: echo "GITHUB_WORKSPACE $GITHUB_WORKSPACE"
-             python --version
+      - run: python --version
             
         
         
