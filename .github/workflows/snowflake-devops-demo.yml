@@ -40,8 +40,10 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       - run: python --version
-      - run: pip install schemachange
-      - name: echo "Step 2 Running schemachange" 
-        run: echo ${{ secrets.SF_ACCOUNT }} | sed 's/ //g'
+      - name: "Step 1 Install schemachange" 
+        run: pip install schemachange
+      - name: "Step 2 Running schemachange" 
+        run: schemachange deploy -f $GITHUB_WORKSPACE/migrations -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY
+        
         
         
