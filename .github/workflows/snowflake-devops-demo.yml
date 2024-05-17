@@ -43,7 +43,7 @@ jobs:
       - name: "Step 1 Install schemachange" 
         run: pip install schemachange
       - name: "Step 2 Running schemachange" 
-        run: schemachange deploy -f $GITHUB_WORKSPACE/migrations -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY
+        run: schemachange deploy -f $GITHUB_WORKSPACE/migrations -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY
         
         
         
