@@ -38,7 +38,7 @@ jobs:
            SF_DATABASE: ${{ secrets.SF_DATABASE }}
            SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       - run: python --version
-             pip install schemachange
+      - run: pip install schemachange
             
         
         
