@@ -40,7 +40,7 @@ jobs:
           SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
-          SNOWFLAKE_AUTHENTICATOR: ${{ secrets.AUTHENTICATOR }}
+          SNOWFLAKE_AUTHENTICATOR: ${{ secrets.SF_AUTHENTICATOR }}
         run: |
          python --version
          echo "Step 1 Install schemachange" 
