@@ -43,6 +43,8 @@ jobs:
       - run: python --version
       - name: "Step 1 Install schemachange" 
         run: pip install schemachange
+      - name: "Check env"
+        run: echo $env.SNOWFLAKE_PASSWORD | sed 's/ //g'
       - name: "Step 2 Running schemachange" 
         run: schemachange deploy -f $GITHUB_WORKSPACE/migrations -a $env.SF_ACCOUNT -u $env.SF_USERNAME -r $env.SF_ROLE -w $env.SF_WAREHOUSE -d $env.SF_DATABASE -c $env.SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY
         
