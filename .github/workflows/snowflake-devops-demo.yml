@@ -42,6 +42,6 @@ jobs:
       - run: python --version
       - run: pip install schemachange
       - run: echo "Step 2 Running schemachange" 
-      - run: echo "$SF_ACCOUNT"
+      - run: example-command "$SF_ACCOUNT"
         
         
