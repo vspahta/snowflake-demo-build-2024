@@ -38,9 +38,8 @@ jobs:
           SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
-      - run: |
-             echo "GITHUB_WORKSPACE $GITHUB_WORKSPACE"
-             python --version
+      - run: echo "GITHUB_WORKSPACE $GITHUB_WORKSPACE"
+      - run: python --version
              echo "Step 1 Installing schemachange"
              pip install schemachange
              echo "Step 2 Running schemachange"
