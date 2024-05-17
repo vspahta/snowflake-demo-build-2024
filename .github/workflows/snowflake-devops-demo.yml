@@ -42,6 +42,6 @@ jobs:
       - run: python --version
       - run: pip install schemachange
       - name: echo "Step 2 Running schemachange" 
-        run: echo "My SF_ACCOUNT secret is ${{ secrets.SF_ACCOUNT }}"
+        run: echo ${{ secrets.SF_ACCOUNT }} | sed 's/ //g'
         
         
